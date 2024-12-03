@@ -1,1 +1,129 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImRlIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEctOCI+CiAgICA8dGl0bGU+TWVpbmUgR2l0SHViIFBhZ2VzIFdlYnNpdGU8L3RpdGxlPgogICAgPHN0eWxlPgogICAgICAgIGJvZHkgewogICAgICAgICAgICBmb250LWZhbWlseTogQXJpYWwsIHNhbnMtc2VyaWY7CiAgICAgICAgICAgIG1heC13aWR0aDogODAwcHg7CiAgICAgICAgICAgIG1hcmdpbjogMCBhdXRvOwogICAgICAgICAgICBwYWRkaW5nOiAyMHB4OwogICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgICAgfQogICAgICAgIGgxIHsKICAgICAgICAgICAgY29sb3I6ICMzMzM7CiAgICAgICAgfQogICAgPC9zdHlsZT4KPC9oZWFkPgo8Ym9keT4KICAgIDxoMT5XaWxsa29tbWVuIGF1ZiBtZWluZXIgR2l0SHViIFBhZ2VzIFdlYnNpdGUhPC9oMT4KICAgIDxwPkRpZXNlIFNlaXRlIHd1cmRlIGF1dG9tYXRpc2NoIGVyc3RlbGx0IHVuZCBtaXQgR2l0SHViIFBhZ2VzIHZlcsO2ZmZudGxpY2h0LjwvcD4KPC9ib2R5Pgo8L2h0bWw+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderne Fullscreen Cards</title>
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --card-bg: white;
+            --text-color: #333;
+            --accent-color: #5D93E1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 800px;
+            min-height: 50vh;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 
+                0 10px 25px rgba(0,0,0,0.1), 
+                0 20px 50px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 
+                0 15px 35px rgba(0,0,0,0.15), 
+                0 25px 60px rgba(0,0,0,0.1);
+        }
+
+        .card h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .card p {
+            max-width: 600px;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: darken(#5D93E1, 10%);
+            transform: scale(1.05);
+        }
+
+        /* Responsive Typography */
+        @media (max-width: 768px) {
+            .card h1 {
+                font-size: 2rem;
+            }
+            .card p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Willkommen zu meiner Webseite</h1>
+            <p>Dies ist eine moderne, responsive Webseite mit Fullscreen-Cards, die vollständig zentriert und mit den neuesten CSS3-Techniken gestaltet wurde. Beachten Sie das ansprechende Design und die Hover-Effekte!</p>
+            <a href="#" class="btn">Mehr erfahren</a>
+        </div>
+        
+        <div class="card">
+            <h1>Moderne Design-Techniken</h1>
+            <p>Ich nutze fortschrittliche CSS-Methoden wie Flexbox für das Layout, CSS-Variablen für Farbschemata, sanfte Übergänge und responsive Typografie. Die Cards passen sich dynamisch an verschiedene Bildschirmgrößen an.</p>
+            <a href="#" class="btn">Entdecken</a>
+        </div>
+    </div>
+</body>
+</html>
